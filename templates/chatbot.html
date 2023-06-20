@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<title>chatbot</title>
+<head>
+<link
+
+href="https://user-images.githubusercontent.com/20112458/49326597-773b7280-f57a-11e8-853d-20ed61d18b0d.png"
+/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='css folder/homepage_responsive.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css folder/chatbot.css') }}">
+</head>
+
+<body>
+    <div class="navbar">
+   
+        <!-- Navbar logo -->
+        <div class="nav-header">
+          <div class="nav-logo">
+            <a href="#">
+              <img src="logo.png" width="100px" alt="logo">
+            </a>
+          </div>
+        </div>
+    
+        <!-- responsive navbar toggle button -->
+        <input type="checkbox" id="nav-check">
+        <div class="nav-btn">
+            <label for="nav-check">
+              <ion-icon name="chevron-up-outline"></ion-icon>
+              <!-- <span><ion-icon name="chevron-up-outline"></ion-icon></span> -->
+              <!-- <span></span>
+              <span></span> -->
+          </label>
+        </div>
+
+        <!-- Navbar items -->
+        <div class="nav-links">
+          <a href="home"><ion-icon name="home-outline" class="icon"></ion-icon>Home</a>
+        <a href="book_know.html"><ion-icon name="airplane-outline" class="icon"></ion-icon> Book Now</a>
+        <a href="Deals.html"><ion-icon name="card-outline" class="icon"></ion-icon>  Deals</a>
+        <!-- Dropdown menu -->
+        <div class="dropdown">
+        <a class="dropBtn" href="about.html"><ion-icon name="newspaper-outline" class="icon"></ion-icon> About
+            <i class="fas fa-angle-down"></i>
+        </a>
+        <div class="drop-content">
+        
+            <!-- Creating sub menu Dropdown -->
+            <div class="dropdown2">
+            <div class="drop-content2">
+            </div>
+            </div>
+        </div>
+      </div>
+        <a href="#"><ion-icon name="person-circle-outline" class="icon"></ion-icon> Login</a>
+        <!-- <button class="loginBtn">Login</button> -->
+    </div>
+
+</div>
+
+        <!-- chatbot -->
+
+<div class="boxed">
+            <div id="chatbox">
+                <ion-icon name="logo-reddit" class="chat_icon"></ion-icon>
+                <p class="botText">
+                <span>Hello there! How may i assist you today?(try typing show me some places)</span>
+                </p>
+            </div>
+            <div id="userInput">
+                <input id="textInput" type="text" name="msg" placeholder="Message" />
+            </div>
+         <script>
+            function getBotResponse() {
+            var rawText = $("#textInput").val();
+            var userHtml = '<p class="userText"><span>' + rawText + "</span></p>";
+            $("#textInput").val("");
+            $("#chatbox").append(userHtml);
+            document
+                .getElementById("userInput")
+                .scrollIntoView({ block: "start", behavior: "smooth" });
+            $.get("/get", { msg: rawText }).done(function(data) {
+                var botHtml = '<p class="botText"><span>' + data + "</span></p>";
+                $("#chatbox").append(botHtml);
+                document
+                .getElementById("userInput")
+                .scrollIntoView({ block: "start", behavior: "smooth" });
+            });
+            }
+            $("#textInput").keypress(function(e) {
+            if (e.which == 13) {
+                getBotResponse();
+            }
+            });
+
+           </script>
+</div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

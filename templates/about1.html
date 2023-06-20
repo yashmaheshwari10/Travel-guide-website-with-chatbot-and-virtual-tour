@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css folder/about.css') }}">
+    <!-- <link rel="stylesheet" href="css folder/nav_bar.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css folder/team_card.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css folder/homepage_responsive.css') }}">
+</head>
+<body>
+    <div class="navbar">
+   
+        <!-- Navbar logo -->
+        <div class="nav-header">
+          <div class="nav-logo">
+            <a href="#">
+              <img src="logo.png" width="100px" alt="logo">
+            </a>
+          </div>
+        </div>
+    
+        <!-- responsive navbar toggle button -->
+        <input type="checkbox" id="nav-check">
+        <div class="nav-btn">
+          <label for="nav-check">
+            <ion-icon name="chevron-up-outline"></ion-icon>
+            <!-- <span></span>
+            <span></span>
+            <span></span> -->
+        </label>
+    </div>
+
+    <!-- Navbar items -->
+    <div class="nav-links">
+    <a href="home_page.html"><ion-icon name="home-outline" class="icon"></ion-icon>Home</a>
+    <a href="book_know.html"><ion-icon name="airplane-outline" class="icon"></ion-icon> Book now</a>
+    <a href="Deals.html"><ion-icon name="card-outline" class="icon"></ion-icon> Deals</a>
+    <!-- Dropdown menu -->
+    <div class="dropdown">
+      <a class="dropBtn" href="about.html"><ion-icon name="earth-outline" class="icon"></ion-icon> Blog
+        <i class="fas fa-angle-down"></i>
+      </a>
+      <div class="drop-content">
+    
+        <!-- Creating sub menu Dropdown -->
+        <div class="dropdown2">
+          <div class="drop-content2">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <button class="loginBtn">Login</button> -->
+    </div>
+
+  </div>
+    <div class="main_ban">
+        <div class="about_ban">
+            <span>More about our project</span>
+           <p> we help you to plan your next "perfect" trip, so to make it possible we have made a chat bot which will interact with user and make a complete list of place to visit and hotel according to your buget</p> 
+        </div>
+        <div class="join_ban">
+            <div class="image">
+                <img src="{{ url_for('static', filename='css folder/photo/istockphoto-1085389362-612x612.jpg') }}">
+            </div>
+            <div class="info_join">
+                help us to build this product
+            </div>
+            <div class="join_button">
+                <a href="">
+                    <button class="button">
+                        join now
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <p class="team">Team Members</p>
+
+    <div class="team_member" id="row_1">
+
+            <div class="card">
+                        <div class="profile">
+                            <img src="{{ url_for('static', filename='css folder/photo/profile-1.jfif') }}">
+                        </div>
+                        <div class="name">Yashraj Nalawade</div>
+                        <div class="contri">contribution :-  worked on frontend</div>
+                        <div class="linkedin">
+                            <button class="linkedin-button">
+                                linkedin
+                            </button>
+                        </div>
+            </div>
+            <div class="card">
+                <div class="profile">
+                    <img src="{{ url_for('static', filename='css folder/photo/profile-2-1.png') }}">
+                </div>
+                <div class="name">Swarnim Yawale</div>
+                <div class="contri">contribution :- worked on backend</div>
+                <div class="linkedin">
+                    <button class="linkedin-button">
+                        linkedin
+                    </button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="profile">
+                    <img src="{{ url_for('static', filename='css folder/photo/profile-3.jfif') }}">
+                </div>
+                <div class="name">Yatharth Varma</div>
+                <div class="contri">contribution :-  worked on database</div>
+                <div class="linkedin">
+                <button class="linkedin-button">
+                    linkedin
+                </button>
+                </div>
+            </div>
+    </div>
+
+
+    <div class="team_member" id="row_2">
+        <div class="card">
+            <div class="profile">
+                <img src="{{ url_for('static', filename='css folder/photo/profile-4.jpg') }}">
+            </div>
+            <div class="name">Yuva Teja</div>
+            <div class="contri">contribution :-  worked on frontend</div>
+            <div class="linkedin">
+                <button class="linkedin-button">
+                    linkedin
+                </button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="profile">
+                <img src="{{ url_for('static', filename='css folder/photo/profile-5.jpeg') }}">
+            </div>
+            <div class="name">Yash Maheshwari</div>
+            <div class="contri">contribution :-  worked on backend</div>
+            <div class="linkedin">
+                <button class="linkedin-button">
+                    linkedin
+                </button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="profile">
+                <img src="{{ url_for('static', filename='css folder/photo/profile-6.jpg') }}">
+            </div>
+            <div class="name">Yash Pawade</div>
+            <div class="contri">contribution :-  worked on database</div>
+            <div class="linkedin">
+                <button class="linkedin-button">
+                    linkedin
+                </button>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home_page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css folder/home_page.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css folder/slider-trial.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css folder/final_div.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css folder/search_div.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css folder/homepage_responsive.css') }}">
+
+</head>
+
+<body>
+    <div class="main_banner">
+
+        <div class="navbar">
+   
+              <!-- Navbar logo -->
+              <div class="nav-header">
+                <div class="nav-logo">
+                  <a href="#">
+                    <img src="logo.png" width="100px" alt="logo">
+                  </a>
+                </div>
+              </div>
+          
+              <!-- responsive navbar toggle button -->
+              <input type="checkbox" id="nav-check">
+              <div class="nav-btn">
+                  <label for="nav-check">
+                    <ion-icon name="chevron-up-outline"></ion-icon>
+                    <!-- <span><ion-icon name="chevron-up-outline"></ion-icon></span> -->
+                    <!-- <span></span>
+                    <span></span> -->
+                </label>
+              </div>
+      
+          <!-- Navbar items -->
+          <div class="nav-links">
+          <a href={{url_for('book999') }}><ion-icon name="airplane-outline" class="icon"></ion-icon> Book Now</a>
+          <a href="{{url_for('deals') }}"><ion-icon name="card-outline" class="icon"></ion-icon>  Deals</a>
+          <a href="{{url_for('chatbot') }}">Chat Bot</a>
+          <!-- Dropdown menu -->
+          <div class="dropdown">
+            <a class="dropBtn" href="{{url_for('about999') }}"><ion-icon name="newspaper-outline" class="icon"></ion-icon> About
+              <i class="fas fa-angle-down"></i>
+            </a>
+            <div class="drop-content">
+          
+              <!-- Creating sub menu Dropdown -->
+              <div class="dropdown2">
+                <div class="drop-content2">
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="{{url_for('login') }}"><ion-icon name="person-circle-outline" class="icon"></ion-icon> Log out</a>
+          <!-- <button class="loginBtn">Login</button> -->
+          </div>
+      
+        </div>
+
+    </div>
+    <div class="slide_bar">
+            <div class="page">
+              <div id="part1"><span class="place">culture</span></div>
+              <div id="part2"><span class="place">nature</span></div>
+              <div id="part3"><span class="place">wild</span></div>
+            </div>
+            <div class="info_slide">
+                <span>WELCOME TO INDIA</span>
+                <p>Each place, and each smile in india has a story to tell. We have so much to share with you, so come along with us to this beautiful journy</p>
+            </div>
+    </div>
+    <div class="search_div">
+        <div class="search_info">
+            Get help for your next trip
+        </div>
+        <div class="search_button">
+            <a href="chatbot.html">
+                <button class="button">EXPLORE</button>
+            </a>
+        </div>
+    </div>
+    <div class="owl-carousel owl-theme">
+        <div class="ban" id="card">Trending Destination</div>
+        <a href="{{url_for('place1') }}"><div class="item-1" id="card"><span class="place-1">Delhi</span></div></a>
+        <a href="{{url_for('place2') }}"><div class="item-2" id="card"><span class="place-1">Mumbai</span></div></a>
+        <a href="book_know.html"><div class="item-3" id="card"><span class="place-1">Kolkata</span></div></a>
+        <a href="book_know.html"><div class="item-4" id="card"><span class="place-1">Jaipur</span></div></a>
+        <a href="book_know.html"><div class="item-5" id="card"><span class="place-1">Goa</span></div></a>
+        <a href="book_know.html"><div class="item-6" id="card"><span class="place-1">Shimla</span></div></a>
+        <a href="book_know.html"><div class="item-7" id="card"><span class="place-1">kerala</span></div></a>
+        <a href="book_know.html"><div class="item-8" id="card"><span class="place-1">Pune</span></div></a>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript">
+            $('.owl-carousel').owlCarousel({
+        loop:false,
+        margin:10,
+        nav:true,
+        dots:false,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:2
+            },
+            1000:{
+                items:3
+            }
+        }
+        })
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

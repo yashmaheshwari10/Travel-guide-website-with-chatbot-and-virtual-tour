@@ -1,0 +1,272 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.combine{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+
+.front_info{
+    display: flex;
+    flex-direction: row;
+    /* position: absolute; */
+    width: 770px;
+    /* height: 247px; */
+    background-color: rgb(154, 196, 175);
+    border-radius: 20px;
+}
+.place_img{
+    width: 50%;
+    padding: 4px 4px 0px;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.detail_info{
+    padding-left: 40px;
+    padding-top: 25px;
+}
+
+h1{
+    font-size: 25px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+p { 
+    display: table-row;
+}
+
+.min_prize{
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.schedule{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 100px;
+}
+
+
+.item_list{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+}
+.category{
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 350px;
+    background-color: rgb(112, 172, 167);
+    border-radius: 20px;
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+
+.category-1{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px;
+    margin-top: 30px;
+}
+.category-2{
+    text-align: center;
+    margin: 15px;
+    font-weight: 15px;
+    margin-bottom: 40px;
+}
+
+.schedule-2{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 100px;
+    margin-bottom: 39px;
+}
+
+
+.hotel_list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hotel_card{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    background-color: rgb(107, 144, 158);
+    border-radius: 7px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    
+}
+
+.hotel_img{
+    width: 25%;
+    padding: 10px 10px 6px;
+}
+
+.hotel_img img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.hotel_name{
+    font-size: 23px;
+    font-weight: 500;
+    align-items: center;
+}
+
+.hotel_detail{
+    padding-top: 15px;
+    padding-left: 10px;
+    margin-right: 164px;
+    width: 45%;
+    text-align: center;
+}
+
+.remark{
+    font-size: 18px;
+}
+.review{
+    font-size: 15px;
+}
+.location{
+    margin-top: 7px;
+}
+.complete_sec{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.prize{
+    font-size: 20px;
+    color: green;
+}
+.Contact{
+    border: none;
+    background-color: black;
+    border-radius: 15px;
+    width: 70px;
+    height: 25px;
+    color: white;
+}
+.but_cont{
+    margin-top: 12px;
+}
+
+.cat {
+    font-size: 28px;
+  }
+
+
+
+
+
+
+/* responsive */
+
+
+
+@media (max-width:1000px){
+    .cat{
+        display: none;
+    }
+    .category{
+        width: 250px;
+    }
+    .item_list{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hotel_card{
+        width: 40%;
+        flex-direction: column;
+        height: 70%;
+    }
+    .hotel_list{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        justify-content: space-around;
+    }
+    .hotel_img{
+        width: 100%;
+    }
+    .hotel_detail{
+        width: 100%;
+        padding: 18px;
+    }
+}
+
+
+@media (max-width:700px){
+    .front_info{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* margin: 0 130px; */
+        width: 80%;
+    }
+    .place_img{
+        width: 100%;
+    }
+    .detail_info{
+        width: 100%;
+        padding-top: 10px;
+        padding-left: 20px;
+        padding-bottom: 10px;
+    }
+
+    .hotel_card{
+        width: 45%;
+        flex-direction: column;
+        height: 70%;
+    }
+    .hotel_name{
+        font-size: 18px;
+    }
+    .location{
+        font-size: 15px;
+    }
+    .remark{
+        font-size: 15px;
+    }
+    .review{
+        font-size: 13px;
+    }
+    .prize{
+        font-size: 18px;
+    }
+    .night_cost{
+        font-size: 13px;
+    }
+    .complete_sec{
+        margin-top: 15px;
+    }
+    .hotel_detail{
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+}

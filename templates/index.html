@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/assets/libs/OwlCarousel-2/dist/assets/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dist/css/iconfont/tabler-icons.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dist/css/style.css')}}">
+</head>
+<body>
+    <!------------------------------>
+    <!-- Header Start -->
+    <!------------------------------>
+    <header class="main-header position-fixed w-100">
+            <div class="container">
+                <nav class="navbar navbar-expand-xl py-0">
+                    <div class="logo">
+                        <a class="navbar-brand py-0 me-0" href="#"><img src="{{ url_for('static', filename='css/assets/images/logooo.png')}}" alt="" ></a>
+                    </div>
+                    <a class="d-inline-block d-lg-block d-xl-none d-xxl-none  nav-toggler text-decoration-none"  data-bs-toggle="offcanvas" href="#offcanvasExample" aria-controls="offcanvasExample">
+                        <i class="ti ti-menu-2 text-warning"></i>
+                    </a>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">                                             
+                            <ul class="navbar-nav me-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link text-capitalize" aria-current="page" href="#">Services</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link text-capitalize" href="#">Elements </a>
+                                </li>
+
+                            </ul>
+                            <div class="d-flex align-items-center">
+
+                                <a class="btn btn-warning btn-hover-secondery text-capitalize " href="/register">register</a>
+                            </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="offcanvas offcanvas-start"  tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                    <div class="logo">
+                        <a class="navbar-brand py-0 me-0" href="#"><img src="{{ url_for('static', filename='css/assets/images/Creato-logo.svg')}}" alt=""></a>
+                    </div> 
+                    <button type="button" class="btn-close text-reset  ms-auto" data-bs-dismiss="offcanvas" aria-label="Close"><i class="ti ti-x text-warning"></i></button>
+                </div>
+                <div class="offcanvas-body pt-0">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-capitalize" aria-current="page" href="#">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-capitalize" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-capitalize" href="#">Pricing </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-capitalize" href="#">Elements </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-capitalize" href="#">blog </a>
+                        </li>
+                        </ul>
+                        <div class="login d-block align-items-center mt-3">
+                            <a class="btn btn-warning text-capitalize w-100" href="#">contact us</a>
+                        </div>
+                </div>
+            </div>
+    </header>
+    <!------------------------------>
+     <!-- Header End  -->
+    <!------------------------------>
+
+    <!------------------------------>
+    <!--- Hero Banner Start--------->
+    <!------------------------------>
+    <section class="hero-banner position-relative overflow-hidden">
+        <div class="container">
+            <div class="row d-flex flex-wrap align-items-center">
+                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="position-relative left-hero-color">
+                        <h1 class="mb-0 fw-bold">
+                           The all in one convenient trip finder
+                        </h1>
+                        <p>The trip finding tool you love.</p>
+                    </div>
+                </div>
+                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="position-relative right-hero-color">
+                        <img src="{{ url_for('static', filename='css/assets/images/trip finder.png')}} " class="img-fluid" height="550" width="550">
+                    </div>          
+                </div>
+            </div>
+        </div>
+    </section>
+    <!------------------------------>
+    <!--- Hero Banner End--------->
+    <!------------------------------>
+
+<!--    &lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+<!--    &lt;!&ndash;- Service sectin Start&#45;&#45;&#45;&#45;&ndash;&gt;-->
+<!--    &lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+<!--    <section class="service position-relative overflow-hidden">-->
+<!--        <div class="container position-relative">-->
+<!--            <img src="../assets/images/service/dot-shape.png" class="shape position-absolute">-->
+<!--            <div class="row">-->
+<!--                <div class="col-12"><small class="fs-7 d-block">Working Process</small></div>-->
+<!--                <div class="col-12 d-xxl-flex d-xl-flex d-lg-flex d-md-flex d-sm-block d-block align-items-center justify-content-xxl-between justify-content-xl-between justify-content-lg-between justify-content-md-between justify-content-sm-between justify-content-sm-center ">-->
+<!--                    <h2 class="fs-2 text-black mb-0">Our Featured Service<br> that We Provide</h2>-->
+<!--                    <a href="#" class="btn btn-warning btn-hover-secondery section-btn">All Services</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="row d-flex flex-wrap justify-content-center step-row">-->
+<!--                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 text-center">-->
+<!--                    <div class="card border-0 shadow">-->
+<!--                        <div class="card-body">-->
+<!--                            <div class="icon-round overflow-hidden rounded-circle position-relative d-flex align-items-center justify-content-center mx-auto text-center">-->
+<!--                                <i class="ti ti-download text-primary position-relative"></i>-->
+<!--                            </div>-->
+<!--                            <h5 class="mb-0 fw-500">Step 1</h5>-->
+<!--                            <h3 class="fs-4">Download our App</h3>-->
+<!--                            <p class="fs-7 mb-0 fw-500">There are many variations of pass for ages of oremsum.</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 text-center">-->
+<!--                    <div class="card border-0 shadow">-->
+<!--                        <div class="card-body">-->
+<!--                            <div class="icon-round overflow-hidden rounded-circle position-relative d-flex align-items-center justify-content-center mx-auto text-center">-->
+<!--                                <i class="ti ti-user text-primary position-relative"></i>-->
+<!--                            </div>-->
+<!--                            <h5 class="mb-0 fw-500">Step 2</h5>-->
+<!--                            <h3 class="fs-4">Create a free Account</h3>-->
+<!--                            <p class="fs-7 mb-0 fw-500">There are many variations of pass for ages of oremsum.</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 text-center">-->
+<!--                    <div class="card border-0 shadow">-->
+<!--                        <div class="card-body">-->
+<!--                            <div class="icon-round overflow-hidden rounded-circle position-relative d-flex align-items-center justify-content-center mx-auto text-center">-->
+<!--                                <i class="ti ti-gift text-primary position-relative"></i>-->
+<!--                            </div>-->
+<!--                            <h5 class="mb-0 fw-500">Step 3</h5>-->
+<!--                            <h3 class="fs-4">Now Start your Journey</h3>-->
+<!--                            <p class="fs-7 mb-0 fw-500">There are many variations of pass for ages of oremsum.</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
+<!--    &lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+<!--    &lt;!&ndash;- Service sectin Start&#45;&#45;&#45;&#45;&ndash;&gt;-->
+<!--    &lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+<!--    -->
+<!--    &lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+<!--    &lt;!&ndash;- Our Service sectin Start&#45;&#45;&#45;&#45;&ndash;&gt;-->
+<!--    &lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+<!--&lt;!&ndash;    <section class="our-service position-relative overflow-hidden">&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="container">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="row">&ndash;&gt;-->
+<!--&lt;!&ndash;                <div class="col-xxl-8 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <img src="{{ url_for('static', filename='css/assets/images/our-service/our-service.svg')}}" class="img-fluid">&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 ps-xxl-0 ps-xl-0 ps-lg-3 ps-md-3 ps-sm-3 ps-3">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <small class="fs-7 d-block">Our Service</small>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <h2 class="fs-2 text-black mb-0">Our Featured Service that We Provide</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <p class="mb-0 fw-500 fs-7">&ndash;&gt;-->
+<!--&lt;!&ndash;                        Seamlessly see the tasks that need your attention, check when your next meeting is coming up, and keep up with your progress.&ndash;&gt;-->
+<!--&lt;!&ndash;                    </p>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <ul class="list-unstyled mb-0 pl-0">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <li class="d-flex flex-wrap align-items-start">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <i class="ti ti-circle-check fs-4 pe-2"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <span class="fs-7 text-black">List of the tasks that require your attention.</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </li>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <li class="d-flex flex-wrap align-items-start">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <i class="ti ti-circle-check fs-4 pe-2"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <span class="fs-7 text-black">Google Calendar integration to see when interruptions will happen</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </li>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    </section> &ndash;&gt;-->
+<!--&lt;!&ndash;    &lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;    &lt;!&ndash;- Our Service sectin End&#45;&#45;&ndash;&gt;&ndash;&gt;-->
+<!--    &lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+<!--    -->
+<!--    &lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+<!--    &lt;!&ndash; Portfolio section Start&#45;&#45;&ndash;&gt;-->
+<!--    &lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+<!--    <section class="portfolio position-relative bg-primary">-->
+<!--        <div class="container position-relative">-->
+<!--            <div class="row">-->
+<!--                <div class="col-12"><small class="fs-7 d-block text-warning">Product Docs</small></div>-->
+<!--                <div class="col-12 d-xxl-flex d-xl-flex d-lg-flex d-md-flex d-sm-block d-block align-items-center justify-content-xxl-between justify-content-xl-between justify-content-lg-between justify-content-md-between justify-content-sm-between justify-content-sm-center ">-->
+<!--                    <h2 class="fs-3 text-white mb-0">Beautiful Docs<br> for your APIs.</h2>-->
+<!--                    <a href="#" class="btn btn-warning btn-hover-secondery section-btn">Open Portfolio</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="row d-flex flex-wrap justify-content-center step-row">-->
+<!--                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 text-center">-->
+<!--                    <div class="card bg-transparent">-->
+<!--                        <div class="card-body">-->
+<!--                            <div class="icon mx-auto rounded-circle d-flex justify-content-center align-items-center"><i class="ti ti-brand-github text-white"></i></div>-->
+<!--                            <h3 class="fs-4 text-white">Github Sync</h3>-->
+<!--                            <p class="fs-7 mb-0 fw-500">Contrary to popular belief, Lorem Ipsum is not simply random text.</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 text-center">-->
+<!--                    <div class="card bg-transparent">-->
+<!--                        <div class="card-body">-->
+<!--                            <div class="icon  mx-auto rounded-circle d-flex justify-content-center align-items-center"><i class="ti ti-crown text-white"></i></div>-->
+<!--                            <h3 class="fs-4 text-white">Branding</h3>-->
+<!--                            <p class="fs-7 mb-0 fw-500">Contrary to popular belief, Lorem Ipsum is not simply random text.</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 text-center">-->
+<!--                    <div class="card bg-transparent">-->
+<!--                        <div class="card-body">-->
+<!--                            <div class="icon mx-auto rounded-circle d-flex justify-content-center align-items-center"><i class="ti ti-message-circle-2 text-white"></i></div>-->
+<!--                            <h3 class="fs-4 text-white">Comments</h3>-->
+<!--                            <p class="fs-7 mb-0 fw-500">Contrary to popular belief, Lorem Ipsum is not simply random text.</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="container position-relative" >-->
+<!--            <div class="portfolio-wrap">-->
+<!--                <div class="owl-carousel owl-theme portfolio-slider">-->
+<!--                        <div class="item"><a href="#"><img src="{{ url_for('static', filename='css/assets/images/portfolio/Portfolio.jpg')}}" class="w-100"></a></div>-->
+<!--                        <div class="item"><a href="#"><img src="{{ url_for('static', filename='css/assets/images/portfolio/Portfolio.jpg')}}" class="w-100"></a></div>-->
+<!--                        <div class="item"><a href="#"><img src="{{ url_for('static', filename='css/assets/images/portfolio/Portfolio.jpg')}}" class="w-100"></a></div>-->
+<!--                        <div class="item"><a href="#"><img src="{{ url_for('static', filename='css/assets/images/portfolio/Portfolio.jpg')}}" class="w-100"></a></div>-->
+<!--                        <div class="item"><a href="#"><img src="{{ url_for('static', filename='css/assets/images/portfolio/Portfolio.jpg')}}" class="w-100"></a></div>-->
+<!--                </div>-->
+<!--            </div>    -->
+<!--        </div>    -->
+<!--    </section>-->
+<!--    &lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+<!--    &lt;!&ndash; Portfolio section End -&#45;&#45;&ndash;&gt;-->
+<!--    &lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+
+<!--    &lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+
+<!--    &lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+
+<!--    &lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+
+<!--    &lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;    -->
+<!--    -->
+<!--    &lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+<!--   -->
+<!--    &lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+
+<!--    &lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+
+<!--    &lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+
+    
+    <script src="{{ url_for('static', filename='css/dist/js/jquery.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='css/dist/js/bootstrap.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='css/assets/libs/OwlCarousel-2/dist/owl.carousel.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='css/dist/js/custom.js')}}"></script>
+
+</body>
+</html>

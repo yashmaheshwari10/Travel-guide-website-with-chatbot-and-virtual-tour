@@ -1,0 +1,116 @@
+.item-1{
+    background-image: url(photo/delhi.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 280px;
+    height: 248px;
+    border-radius: 9px;
+}
+
+.item-2{
+    background-image: url(photo/mumbai.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 280px;
+    height: 248px;
+    border-radius: 9px;
+}
+.item-3{
+    background-image: url(photo/Victoria_Memorial_By_Saprativa.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 280px;
+    height: 248px;
+    border-radius: 9px;
+}
+.item-4{
+    background-image: url(photo/jaipur1-940x671.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 280px;
+    height: 248px;
+    border-radius: 9px;
+}
+.item-5{
+    background-image: url(photo/view-how-villa-chawls-are-reshaping-goa-boosts-tourism-economy.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 280px;
+    height: 248px;
+    border-radius: 9px;
+}
+.item-6{
+    background-image: url(photo/shimla-feature-compressed.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 280px;
+    height: 248px;
+    border-radius: 9px;
+}
+.item-7{
+    background-image: url(photo/see-and-do-kerala-social.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 280px;
+    height: 248px;
+    border-radius: 9px;
+}
+.item-8{
+    background-image: url(photo/pune-tourist-places-to-visit.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 280px;
+    height: 248px;
+    border-radius: 9px;
+}
+#card{
+    margin-left: 80px;
+}
+.owl-stage{
+    /* margin-top: 40px; */
+    /* background-color: #e9efec; */
+    background-color: #fbfbfd;
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+.ban{
+    width: 280px;
+    /* background-color: #e9efec; */
+    background-color: #fbfbfd;
+    color: rgb(37, 124, 37);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40pX;
+    margin-right: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    padding-top: 25%;
+    padding-left: 60px;
+    padding: 0px;
+    text-align: center;
+    padding-top: 85px;
+}
+.place-1{
+    display: flex;
+    padding-left: 20px;
+    font-size: 35px;
+    color: aliceblue;
+    padding-top: 195px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.owl-theme .owl-nav {
+    margin-top: 0px;
+    background-color: #fbfbfd;
+}
+@media(max-width:585px){
+    #card{
+        margin-left: 110px;
+    }
+    /* .ban{
+        padding: 0px;
+        text-align: center;
+        padding-top: 85px;
+    } */
+}

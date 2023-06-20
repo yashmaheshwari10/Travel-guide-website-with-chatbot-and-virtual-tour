@@ -1,0 +1,90 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e9efec;;
+}
+.boxed {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    margin-top: 60px;
+    border: none;
+    background-color: #b1cfbf93;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+}
+
+
+
+h3 {
+    color: black;
+    font-size: 20px;
+    margin-top: 3px;
+    text-align: center;
+  }
+  #chatbox {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+
+  }
+  #userInput {
+    /* margin-left: auto;
+    margin-right: auto; */
+    width: 50%;
+    margin-bottom: 10px;
+  }
+  #textInput {
+    width: 90%;
+    border: none;
+    font-size: 17px;
+    height: 28px;
+    border-radius: 20px;
+    padding-left: 20px;
+  }
+  .userText {
+    color: white;
+    font-size: 17px;
+    text-align: right;
+    line-height: 30px;
+    margin-top: 15px;
+  }
+  .userText span {
+    background-color: #598159;
+    padding: 5px 30px;
+    
+    border-radius: 15px;
+
+  }
+  .botText {
+    color: white;
+    font-size: 17px;
+    text-align: left;
+    line-height: 30px;
+    background-color: #606362;
+    border-radius: 15px;
+    padding: 10px;
+  }
+  /* .botText span {
+    background-color: #BEE3FF;
+    padding: 10px;
+    border-radius: 2px;
+  } */
+  #tidbit {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+  }
+  .chat_icon{
+    font-size: 30px;
+    padding-right: 355px;
+    padding-bottom: 5px;
+    color: rgb(5, 82, 52);
+  }

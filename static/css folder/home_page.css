@@ -1,0 +1,186 @@
+body{
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.main_banner{
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-image: url(photo/indian-aesthetic-taj-mahal-nnwi52ldlb8nxl0x.jpg);
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-size: cover;
+    padding-bottom: 38%;
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-top: 0px;
+    
+}
+.nav_bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    font-family: arail;
+    font-size: 15px;
+    margin:  0 auto;
+}
+.logo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 0.1;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.info_button{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 0.3;
+    margin-left: 51px;
+}
+.register{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 0.09;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    color: black;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.text_ban{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+.search_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.p1{
+    color: #e9efec;
+    margin-top: 330px;
+    margin-left: 80px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 80px;
+}
+.slide_bar{
+    margin-top: 20px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    /* background-color: #e9efec; */
+    background-color: #fbfbfd;
+    display: flex;
+    flex-direction: row;
+}
+#part1{
+    display: inline-block;
+    background-image: url(photo/446px-Ganga_aarti_with_lamp_vase_at_Dasaswamedh_Ghat\,_Varanasi_05.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 180px;
+    height: 250px;
+    margin-left: 100px;
+    /* border-radius: 12px; */
+}
+
+#part2{
+    display: inline-block;
+    background-image: url(photo/2023168.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 180px;
+    height: 250px;
+    margin-left: 8px;
+    /* border-radius: 12px; */
+
+}
+#part3{
+    display: inline-block;
+    background-image: url(photo/wild.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 180px;
+    height: 250px;
+    margin-left: 8px;
+    /* border-radius: 12px; */
+
+}
+
+.info_slide{
+    /* display: inline-block; */
+    margin-left: 230px;
+    margin-top: 45px;
+    width: 280px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray;
+}
+span{
+    font-size: 43px;
+    font-weight: bold;
+    color: rgb(37, 124, 37);
+}
+.place{
+    display: flex;
+    padding-left: 17px;
+    font-size: 30px;
+    color: aliceblue;
+    padding-top: 195px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+@media(max-width:1200px){
+
+    .slide_bar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .info_slide{
+        margin-left: 0px;
+        width: 100%;
+    }
+    #part1{
+        margin-left: 0px;
+    }
+    .info_slide{
+        text-align: center;
+    }
+}
+
+@media(max-width:585px){
+
+    .page{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    #part3{
+        margin-top: 8px;
+        width: 81.2%;
+        padding-left: 0px;
+        /* margin-right: 10px; */
+        padding-top: 0px;
+        padding-bottom: 10px;
+        margin-left: 5px;
+    }
+
+    .info_slide{
+        text-align: center;
+    }
+}
+

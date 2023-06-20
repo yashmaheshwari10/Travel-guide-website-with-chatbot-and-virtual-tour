@@ -1,0 +1,204 @@
+*{
+  padding: 0;  
+  margin: 0;
+  box-sizing: border-box;
+--green:#1ec6b6;
+--lightgrey:#f7f7f7;
+--dark:#0e1010;
+--trans:all 0.3s ease-in-out;
+}
+html{
+    background-color:whitesmoke;
+}
+html,body{
+    font-family: 'Open Sans', sans-serif;
+    /* background-color: #fbfbfd; */
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Raleway', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: var(--dark);
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(photo/boat44.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center
+    
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:20px
+
+}
+.logo{
+    cursor: pointer;
+    
+}
+.navlinks{
+    list-style-type: none;
+}
+.navlinks li{
+display:inline-block;
+margin: 10px 30px;     
+}
+.title{
+    text-align: center;
+    color:rgb(204, 190, 190);
+    position: absolute;
+    top: 50%;
+
+}
+.title h1{
+    margin-bottom: 30px;
+    font-size: 60px;
+    font-weight: 400px;
+}
+.title p{
+    margin: 10px 90px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.sub-title{
+    padding: 50px;
+    text-align: center;
+    font-size: 50px;
+    margin: 0px;
+    color:rgb(76, 70, 70);
+    font-weight: 800;
+}
+.exclusives{
+    display:flex;
+    justify-content: space-around;
+    border-radius: 10px;
+
+}
+.exclusives img{
+    border-radius: 10px;
+    position: relative;
+    background-position: center;
+}
+.exc a :hover{
+    box-shadow: 0px 0px 18px -4px rgba(0, 0, 0, 0.64);
+}
+.desc{
+    text-align: center;
+    padding: 10px;
+    font-weight:900;
+    color:dimgray;
+    cursor: pointer;
+    font-size: 20px;
+}
+.para{
+    text-align: center;
+    font-size: 15px;
+    color: black;
+    font-weight: 500px;
+}
+.sub-title2{
+    padding-top: 80px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 900;
+    color: rgb(76, 70, 70);
+}
+.dest{
+    margin: 28px;
+    float:left;
+    padding-bottom: 5px;
+}
+.dest-desc{
+    text-align: center;
+    font-weight: 900;
+    font-size: 25px;
+    padding: 10px;
+    color: lightslategray;
+    
+}
+.dest-a img{
+    position:relative;
+    background-position: center;
+    border-radius: 10px;
+
+}
+.dest-a :hover{
+    box-shadow: 0px 0px 18px -4px  rgba(0, 0, 0, 0.64);
+}
+.icon-flex{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    
+}
+.icons-container{
+    padding: 5px;
+
+}
+.flight{
+    font-size: 13px;
+    padding: 6px;
+
+}
+.hotel{
+    font-size: 13px; 
+    padding: 6px;
+
+}
+.activity{
+    font-size: 13px; 
+    padding: 6px;
+}
+.transfer{
+    font-size: 13px;
+    text-align: center;
+}
+.travel-plan{
+    padding-top: 7px;
+    padding-bottom: 5px;
+    font-weight: 600;
+}
+.travel-plan2{
+    font-weight: 600;
+}
+.travel-plan3{
+    display:flex;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+.travel-plan3-1{
+    padding-left: 16px;
+    line-height: 20px;
+    padding-top: 10px;
+    font-weight: 700;
+}
+.travel-plan3-2{
+    padding-right: 20px;
+    padding-bottom: 10px;
+}
+.one{
+    font-size: 12px;
+    font-weight: bold;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    opacity: 0.3;
+    color: black;
+}
+.price{
+font-size: 25px;
+font-weight: 900;
+padding: 0px;
+}
+.two{
+    font-size: 12px; 
+    font-weight:bold;
+    padding-top: 0px;
+    padding-left: 45px;
+    opacity: 0.3;
+}

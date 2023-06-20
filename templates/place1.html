@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delhi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/place.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css folder/homepage_responsive.css') }}">
+
+</head>
+<style>
+    .cat {
+  font-size: 28px;
+}
+    body {
+  background-image: url("https://www.newegg.com/insider/wp-content/uploads/windows_xp_bliss-wide.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+    }
+</style>
+<body>
+
+    <div class="navbar">
+   
+        <!-- Navbar logo -->
+        <div class="nav-header">
+          <div class="nav-logo">
+            <a href="#">
+              <img src="logo.png" width="100px" alt="logo">
+            </a>
+          </div>
+        </div>
+    
+        <!-- responsive navbar toggle button -->
+        <input type="checkbox" id="nav-check">
+        <div class="nav-btn">
+          <label for="nav-check">
+            <ion-icon name="chevron-up-outline"></ion-icon>
+            <!-- <span></span>
+            <span></span>
+            <span></span> -->
+        </label>
+    </div>
+
+    <!-- Navbar items -->
+    <div class="nav-links">
+    <a href="{{url_for('home') }}"><ion-icon name="home-outline" class="icon"></ion-icon>Home</a>
+    <a href="{{url_for('book999') }}"><ion-icon name="airplane-outline" class="icon"></ion-icon> Book now</a>
+    <a href="{{url_for('deals') }}"><ion-icon name="card-outline" class="icon"></ion-icon> Deals</a>
+    <!-- Dropdown menu -->
+    <div class="dropdown">
+      <a class="dropBtn" href="{{url_for('about999') }}"><ion-icon name="earth-outline" class="icon"></ion-icon> Blog
+        <i class="fas fa-angle-down"></i>
+      </a>
+      <div class="drop-content">
+    
+        <!-- Creating sub menu Dropdown -->
+        <div class="dropdown2">
+          <div class="drop-content2">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <button class="loginBtn">Login</button> -->
+    </div>
+
+
+
+
+    <div class="combine">
+
+        <div class="front_info">
+            <div class="place_img">
+                <img src="https://cdn.britannica.com/37/189837-050-F0AF383E/New-Delhi-India-War-Memorial-arch-Sir.jpg" alt="place_holder">
+            </div>
+            <div class="detail_info">
+                <h1 class="delhi">DELHI</h1>
+                <p> Duration : 3 days</p>
+                <p> Guest    : 4 adults</p>
+                <div class="min_prize">MIN PRICE : $ 1,500</div>
+            </div>
+        </div>
+    </div>
+
+    <div  class="schedule">Top Things To Do</div>
+
+    <div class="item_list">
+        <div class="category">
+                <div class=" category-1">
+                    Places To visit <ion-icon name="location-outline" class="cat"></ion-icon>
+                </div>
+                <div class=" category-2" >
+                    India gate, Qutub Minar, Humayun’s Tomb, khans village, lotus temple, Red fort
+                </div>
+        </div>
+        <div class="category">
+                <div class=" category-1">
+                    Places To Shop  <ion-icon name="cart-outline" class="cat"></ion-icon>
+                </div>
+                <div class=" category-2">
+                    Khan market, karol bagh market, chandni chowk, palika bazzar,greater
+                    kailash
+                </div>
+        </div>
+        <div class="category">
+                <div class=" category-1">
+                    Places To Eat    <ion-icon name="restaurant-outline" class="cat"></ion-icon>
+                </div>
+                <div class=" category-2" >
+                    Bukhara, rajinder Da Dhaba, oliver bar and kitchen, indian accent,
+                    karims, bo tai
+                </div>
+        </div>
+    </div>
+
+    <div  class="schedule-2">Our Top Picks For Hotel</div>
+
+    <div class="hotel_list">
+        
+
+        <div class="hotel_card">
+            <div class="hotel_img">
+                <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/278261524.jpg?k=d0f6004a3ab0b067761cc417fdd3689be83482b0f95b9b18dd0bfa6e5949a1d3&o=&hp=1" alt="hotel">
+            </div>
+            <div class="hotel_detail">
+                <div class="hotel_name">Pride Plaza Hotel, Aerocity New Delhi </div>
+                <div class="location"><ion-icon name="location-outline"></ion-icon>     Hotel in South West, New Delhi</div>
+                <div class="complete_sec">
+                    <div class="review_sec">
+                        <p class="remark">Good</p>
+                        <p class=" review"> 4,024 reviews</p>
+                    </div>
+                    <div class="cost">
+                        <p class="prize">$ 6,643</p>
+                        <p class="night_cost">per night</p>
+                        <div class="but_cont"><button class="Contact">Contact</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hotel_card">
+            <div class="hotel_img">
+                <img src="https://pix10.agoda.net/hotelImages/9455124/0/4311c63b7c31d6e42eab66d2078cf3c2.jpg?ca=20&ce=0&s=1024x768" alt="hotel">
+            </div>
+            <div class="hotel_detail">
+                <div class="hotel_name">
+                    Radisson Blu Plaza Delhi Airport</div>
+                <div class="location"><ion-icon name="location-outline"></ion-icon>     Hotel in South West, New Delhi</div>
+                <div class="complete_sec">
+                    <div class="review_sec">
+                        <p class="remark">Very Good</p>
+                        <p class=" review"> 5,882 reviews</p>
+                    </div>
+                    <div class="cost">
+                        <p class="prize">$ 6,800</p>
+                        <p class="night_cost">per night</p>
+                        <div class="but_cont"><button class="Contact">Contact</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hotel_card">
+            <div class="hotel_img">
+                <img src="https://www.ahstatic.com/photos/7484_ho_00_p_1024x768.jpg" alt="hotel">
+            </div>
+            <div class="hotel_detail">
+                <div class="hotel_name">
+                    ibis New Delhi Aerocity - An Accor Brand 4 stars</div>
+                <div class="location"><ion-icon name="location-outline"></ion-icon>     Hotel in South West, New Delhi</div>
+                <div class="complete_sec">
+                    <div class="review_sec">
+                        <p class="remark">Good</p>
+                        <p class=" review"> 6,569 reviews</p>
+                    </div>
+                    <div class="cost">
+                        <p class="prize">$ 4,099</p>
+                        <p class="night_cost">per night</p>
+                        <div class="but_cont"><button class="Contact">Contact</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hotel_card">
+            <div class="hotel_img">
+                <img src="https://www.tajhotels.com/content/dam/luxury/hotels/taj-palace-delhi/images/at_a_glance/16x7/Facade3.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg" alt="hotel">
+            </div>
+            <div class="hotel_detail">
+                <div class="hotel_name">Taj Palace, New Delhi </div>
+                <div class="location"><ion-icon name="location-outline"></ion-icon>    Hotel in Central Delhi, New Delhi</div>
+                <div class="complete_sec">
+                    <div class="review_sec">
+                        <p class="remark">Fabulous</p>
+                        <p class=" review"> 4,024 reviews</p>
+                    </div>
+                    <div class="cost">
+                        <p class="prize">$ 7,500</p>
+                        <p class="night_cost">per night</p>
+                        <div class="but_cont"><button class="Contact">Contact</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<iframe width="100%" height="640" style="width: 100%; height: 640px; border: none; max-width: 100%;" allow="xr-spatial-tracking; vr; gyroscope; accelerometer; fullscreen; autoplay; xr" scrolling="no" allowfullscreen="true"  frameborder="0" src="https://webobook.com/public/64837b15f9fcfa5cf97120e2,en?ap=true&si=true&sm=false&sp=true&sfr=false&sl=false&sop=false&" allowvr="yes" ></iframe>
+        
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

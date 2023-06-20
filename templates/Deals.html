@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deals</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css folder/homepage_responsive.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css folder/deal.css') }}">
+</head>
+<body>
+    <div class="navbar">
+   
+        <!-- Navbar logo -->
+        <div class="nav-header">
+          <div class="nav-logo">
+            <a href="#">
+              <img src="logo.png" width="100px" alt="logo">
+            </a>
+          </div>
+        </div>
+    
+        <!-- responsive navbar toggle button -->
+        <input type="checkbox" id="nav-check">
+        <div class="nav-btn">
+            <label for="nav-check">
+              <ion-icon name="chevron-up-outline"></ion-icon>
+              <!-- <span><ion-icon name="chevron-up-outline"></ion-icon></span> -->
+              <!-- <span></span>
+              <span></span> -->
+          </label>
+        </div>
+
+    <!-- Navbar items -->
+    <div class="nav-links">
+    <a href="home_page.html"><ion-icon name="home-outline" class="icon"></ion-icon> Home</a>
+    <a href="Deals.html"><ion-icon name="card-outline" class="icon"></ion-icon>  Deals</a>
+    <!-- Dropdown menu -->
+    <div class="dropdown">
+      <a class="dropBtn" href="about.html"><ion-icon name="newspaper-outline" class="icon"></ion-icon> About
+        <i class="fas fa-angle-down"></i>
+      </a>
+      <div class="drop-content">
+    
+        <!-- Creating sub menu Dropdown -->
+        <div class="dropdown2">
+          <div class="drop-content2">
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#"><ion-icon name="person-circle-outline" class="icon"></ion-icon> Login</a>
+    <!-- <button class="loginBtn">Login</button> -->
+    </div>
+
+  </div>
+
+  <div class="down_icon">
+    <div class="main"><ion-icon name="construct-outline" class="icon_down"></ion-icon></div>
+    <div class="notice">
+        <h1>We'll be back soon</h1>
+        <p>
+            sorry for inconvenience we're performing maintanance at the moment 
+        </p>
+    </div>
+  </div>
+
+
+
+
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

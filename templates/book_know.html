@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fonts  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css folder/booknow.css') }}">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="header">
+        <nav>
+            <img src="" alt="Logo" class="logo">
+            <ul class="navlinks">
+                <li><a href="{{url_for('home') }}">Home</a></li>
+                <li><a href="{{url_for('about999') }}">About Us</a></li>
+                <li><a href="{{url_for('chatbot') }}">chatbot</a></li>
+                <li><a href="{{url_for('login') }}">Login/Sign Up</a></li>
+            </ul>
+        </nav>
+        <header>
+            <div class="title">
+                <h1>Let The Journey Begin</h1>
+<!--                <p>Lopx ipsum dolor sit amet consectetur adipisicing elit. Velit autem veniam cum at, reprehenderit-->
+<!--                    laboriosam labore incidunt delectus aperiam mollitia accusamus perspiciatis asperiores sequi-->
+<!--                    voluptatem iusto dignissimos totam quos pariatur officiis, modi deserunt praesentium quasi quis-->
+<!--                    neque? Aspernatur, optio quia!</p>-->
+            </div>
+        </header>
+    </div>
+
+    <div class="container">
+        <h1 class="sub-title">Exclusive</h1>
+        <div class="exclusives">
+            <div class="exc">
+                <a href="#" target="_blank">
+                    <img src="https://www.holidify.com/images/bgImages/GOA.jpg" width="300px" height="300px">
+
+                </a>
+                <div class="desc">goa</div>
+                <p class="para">Starts @ 12,000</p>
+            </div>
+            <div class="exc">
+                <a href="#" target="_blank">
+
+                    <img src="https://hikerwolf.com/wp-content/uploads/2020/03/Kashmir-4-999x800.jpg" width="300px" height="300px">
+
+                </a>
+                <div class="desc">Kashmir</div>
+                <p class="para">Starts @ 12,000</p>
+            </div>
+            <div class="exc">
+                <a href="#" target="_blank">
+
+                    <img src="data:image/jpeg;base64,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" width="300px" height="300px">
+
+                </a>
+                <div class="desc">Kerala</div>
+                <p class="para">Starts @ 12,000</p>
+            </div>
+            <div class="exc">
+                <a href="#" target="_blank">
+
+                    <img src="https://img.staticmb.com/mbcontent/images/uploads/2022/8/bhu%20naksha%20rajasthan.jpg" width="300px" height="300px">
+
+                </a>
+                <div class="desc">Rajasthan</div>
+                <p class="para">Starts @ 12,000</p>
+            </div>
+        </div>
+        <div class="dest-container">
+            <h1 class="sub-title2">Destination</h1>
+            <div class="destinations">
+                <div class="dest">
+                    <div class="dest-desc">Andaman</div>
+                    <a href="#" class="dest-a">
+                        <img src="{{ url_for('static', filename='css folder/images/andaman.jpg') }}" width="300px" height="300px" alt="">
+                    </a>
+    
+                    <div class="icon-flex">
+                        <div class="icons-container">
+                            <img src="{{ url_for('static', filename='css folder/images/003-airplane.png') }}" class="icon">
+                            <p class="flight">2 Flights</p>
+                        </div>
+                        <div class="icons-container">
+                            <img src="{{ url_for('static', filename='css folder/images/006-review.png') }}" class="icon">
+                            <p class="hotel">4 Hotels</p>
+                        </div>
+                        <div class="icons-container">
+                            <img src="{{ url_for('static', filename='css folder/images/002-exercise-1.png') }}" class="icon">
+                            <p class="activity">12 Activites</p>
+                        </div>
+                        <div class="icons-container">
+                            <img src="{{ url_for('static', filename='css folder/images/007-sedan.png') }}" width="40" class="icon">
+                            <p class="transfer">6 Transfers</p>
+                        </div>
+                    </div>
+                    <div class="travel-plan">
+                        <p class="travel-plan-para"><span class="red">1N</span> Port Blair | <span class="red">2N</span> Havelock |
+                    </div>
+                    <div class="travel-plan2">
+                        <span class="red">1N</span> Niel Island | <span class="red">1N</span> Port Blair</p>
+                    </div>
+                    <div class="travel-plan3">
+                        <div class="travel-plan3-1">
+                            <ul class="list">
+                                <li class="items">Half Day Adventure</li>
+                                <li class="items">Snorkeling</li>
+                            </ul>
+                        </div>
+                        <div class="travel-plan3-2">
+                            <p class="one">Starting from</p>
+                            <h2 class="price">&#8377;44,848</h2>
+                            <p class="two">per person</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="dest">
+                    <div class="dest-desc">Shimla</div>
+                    <a href="#" class="dest-a">
+                        <img src="{{ url_for('static', filename='css folder/images/shimla.webp') }}" width="300px" height="300px" alt="">
+                    </a>
+                    
+                    <div class="icon-flex">
+                        <div class="icons-container">
+                            <img src="{{ url_for('static', filename='css folder/images/003-airplane.png') }}" class="icon">
+                            <p class="flight">0 Flights</p>
+                        </div>
+                        <div class="icons-container">
+                            <img src="{{ url_for('static', filename='css folder/images/006-review.png') }}" class="icon">
+                            <p class="hotel">3 Hotels</p>
+                        </div>
+                        <div class="icons-container">
+                            <img src="{{ url_for('static', filename='css folder/images/002-exercise-1.png') }}" class="icon">
+                            <p class="activity">7 Activites</p>
+                        </div>
+                        <div class="icons-container">
+                            <img src="{{ url_for('static', filename='css folder/images/007-sedan.png') }}" width="40" class="icon">
+                            <p class="transfer">11 Transfers</p>
+                        </div>
+                    </div>
+                    <div class="travel-plan">
+                        <p class="travel-plan-para"><span class="red">2N</span> Shimla | <span class="red">3N</span> Manali |
+                    </div>
+                    <div class="travel-plan2">
+                        <span class="red">2N</span> Dharamshala | <span class="red">1N</span> Amritsar</p>
+                    </div>
+                    <div class="travel-plan3">
+                        <div class="travel-plan3-1">
+                            <ul class="list">
+                                <li class="items">Kurfi</li>
+                                <li class="items">Viceregal Lodge</li>
+                                <li class="items">Rock Garden</li>
+                            </ul>
+                        </div>
+                        <div class="travel-plan3-2">
+                            <p class="one">Starting from</p>
+                            <h2 class="price">&#8377;38,759</h2>
+                            <p class="two">per person</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="dest">
+                    <div class="dest-desc">Goa</div>
+                    <a href="#" class="dest-a">
+                        <img src="https://static.toiimg.com/thumb/msid-55310626,width-748,height-499,resizemode=4,imgsize-175052/.jpg" width="300px" height="300px" alt="">
+                    </a>
+                    
+                    <div class="icon-flex">
+                        <div class="icons-container">
+                            <img src="{{ url_for('static', filename='css folder/images/003-airplane.png') }}" class="icon">
+                            <p class="flight">2 Flights</p>
+                        </div>
+                        <div class="icons-container">
+                            <img src="{{ url_for('static', filename='css folder/images/006-review.png') }}" class="icon">
+                            <p class="hotel">1 Hotels</p>
+                        </div>
+                        <div class="icons-container">
+                            <img src="{{ url_for('static', filename='css folder/images/002-exercise-1.png') }}" class="icon">
+                            <p class="activity">3 Activites</p>
+                        </div>
+                        <div class="icons-container">
+                            <img src="{{ url_for('static', filename='css folder/images/007-sedan.png') }}" width="40" class="icon">
+                            <p class="transfer">2 Transfers</p>
+                        </div>
+                    </div>
+                    <div class="travel-plan">
+                        <p class="travel-plan-para"><span class="red">4N</span> Goa </p>
+                    </div>
+                    <div class="travel-plan2">
+                        <span class="red"> </span> <span class="red"></span> </p>
+                    </div>
+                    <div class="travel-plan3">
+                        <div class="travel-plan3-1">
+                            <ul class="list">
+                                <li class="items">North Goa <div>Sightseeing</div></li>
+                                <li class="items">Unexplored South <div>Goa</div> </li>
+                            </ul>
+                        </div>
+                        <div class="travel-plan3-2">
+                            <p class="one">Starting from</p>
+                            <h2 class="price">&#8377;23,826</h2>
+                            <p class="two">per person</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="dest">
+                    <div class="dest-desc">Ladakh</div>
+                    <a href="#" class="dest-a">
+                        <img src="data:image/jpeg;base64,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" width="300px" height="300px" alt="">
+                    </a>
+                    
+                    <div class="icon-flex">
+                        <div class="icons-container">
+                            <img src="css folder/images/003-airplane.png" class="icon">
+                            <p class="flight">2 Flights</p>
+                        </div>
+                        <div class="icons-container">
+                            <img src="css folder/images/006-review.png" class="icon">
+                            <p class="hotel">4 Hotels</p>
+                        </div>
+                        <div class="icons-container">
+                            <img src="css folder/images/002-exercise-1.png" class="icon">
+                            <p class="activity">12 Activites</p>
+                        </div>
+                        <div class="icons-container">
+                            <img src="css folder/images/007-sedan.png" width="40" class="icon">
+                            <p class="transfer">6 Transfers</p>
+                        </div>
+                    </div>
+                    <div class="travel-plan">
+                        <p class="travel-plan-para"><span class="red">2N</span> Leh | <span class="red">1N</span> Nubra Valley |
+                    </div>
+                    <div class="travel-plan2">
+                        <span class="red">1N</span> Pangoang | <span class="red">1N</span> Leh </p>
+                    </div>
+                    <div class="travel-plan3">
+                        <div class="travel-plan3-1">
+                            <ul class="list">
+                                <li class="items">Tour Manager</li>
+                                <li class="items">Inner Line Permit</li>
+                            </ul>
+                        </div>
+                        <div class="travel-plan3-2">
+                            <p class="one">Starting from</p>
+                            <h2 class="price">&#8377;53,532</h2>
+                            <p class="two">per person</p>
+                        </div>
+                    </div>
+                </div>
+<!--                <div class="dest">-->
+<!--                    <div class="dest-desc">Varanasi</div>-->
+<!--                    <a href="#" class="dest-a">-->
+<!--                        <img src="css folder/images/varanasi.jpg" width="300px" height="300px" alt="">-->
+<!--                    </a>-->
+
+<!--                    <div class="icon-flex">-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/003-airplane.png" class="icon">-->
+<!--                            <p class="flight">2 Flights</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/006-review.png" class="icon">-->
+<!--                            <p class="hotel">1 Hotels</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/002-exercise-1.png" class="icon">-->
+<!--                            <p class="activity">5 Activites</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/007-sedan.png" width="40" class="icon">-->
+<!--                            <p class="transfer">3 Transfers</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="travel-plan">-->
+<!--                        <p class="travel-plan-para"><span class="red">1N</span> Port Blair | <span class="red">2N</span> Havelock |-->
+<!--                    </div>-->
+<!--                    <div class="travel-plan2">-->
+<!--                        <span class="red">1N</span> Niel Island | <span class="red">1N</span> Port Blair</p>-->
+<!--                    </div>-->
+<!--                    <div class="travel-plan3">-->
+<!--                        <div class="travel-plan3-1">-->
+<!--                            <ul class="list">-->
+<!--                                <li class="items">Half Day Adventure</li>-->
+<!--                                <li class="items">Snorkeling</li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                        <div class="travel-plan3-2">-->
+<!--                            <p class="one">Starting from</p>-->
+<!--                            <h2 class="price">&#8377;25,654</h2>-->
+<!--                            <p class="two">per person</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="dest">-->
+<!--                    <div class="dest-desc">Mathura</div>-->
+<!--                    <a href="#" class="dest-a">-->
+<!--                        <img src="css folder/images/mathura.jpg" width="300px" height="300px" alt="">-->
+<!--                    </a>-->
+
+<!--                    <div class="icon-flex">-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/003-airplane.png" class="icon">-->
+<!--                            <p class="flight">0 Flights</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/006-review.png" class="icon">-->
+<!--                            <p class="hotel">2 Hotels</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/002-exercise-1.png" class="icon">-->
+<!--                            <p class="activity">4 Activites</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/007-sedan.png" width="40" class="icon">-->
+<!--                            <p class="transfer">4 Transfers</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="travel-plan">-->
+<!--                        <p class="travel-plan-para"><span class="red">2N</span> Mathura | <span class="red">2N</span> Vrindavan |-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash; <div class="travel-plan2">-->
+<!--                        <span class="red">1N</span> Niel Island | <span class="red">1N</span> Port Blair</p>-->
+<!--                    </div> &ndash;&gt;-->
+<!--                    <div class="travel-plan3">-->
+<!--                        <div class="travel-plan3-1">-->
+<!--                            <ul class="list">-->
+<!--                                <li class="items">Krishna Temple</li>-->
+<!--                                &lt;!&ndash; <li class="items">Snorkeling</li> &ndash;&gt;-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                        <div class="travel-plan3-2">-->
+<!--                            <p class="one">Starting from</p>-->
+<!--                            <h2 class="price">&#8377;15,247</h2>-->
+<!--                            <p class="two">per person</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="dest">-->
+<!--                    <div class="dest-desc">Gujarat</div>-->
+<!--                    <a href="#" class="dest-a">-->
+<!--                        <img src="css folder/images/kutch gujarat.jpg" width="300px" height="300px" alt="">-->
+<!--                    </a>-->
+
+<!--                    <div class="icon-flex">-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/003-airplane.png" class="icon">-->
+<!--                            <p class="flight">2 Flights</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/006-review.png" class="icon">-->
+<!--                            <p class="hotel">4 Hotels</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/002-exercise-1.png" class="icon">-->
+<!--                            <p class="activity">4 Activites</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/007-sedan.png" width="40" class="icon">-->
+<!--                            <p class="transfer">5 Transfers</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="travel-plan">-->
+<!--                        <p class="travel-plan-para"><span class="red">1N</span> Ahemdabad | <span class="red">1N</span> Dwarka |-->
+<!--                    </div>-->
+<!--                    <div class="travel-plan2">-->
+<!--                        <span class="red">1N</span> Somnath | <span class="red">1N</span> Sasan Gir </p>-->
+<!--                    </div>-->
+<!--                    <div class="travel-plan3">-->
+<!--                        <div class="travel-plan3-1">-->
+<!--                            <ul class="list">-->
+<!--                                <li class="items">Siddi Saiyed Mosque</li>-->
+<!--                                <li class="items">Subaramati Ashram</li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                        <div class="travel-plan3-2">-->
+<!--                            <p class="one">Starting from</p>-->
+<!--                            <h2 class="price">&#8377;20,920</h2>-->
+<!--                            <p class="two">per person</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="dest">-->
+<!--                    <div class="dest-desc">Kedarnath</div>-->
+<!--                    <a href="#" class="dest-a">-->
+<!--                        <img src="css folder/images/KEDARNATH.jpg" width="300px" height="300px" alt="">-->
+<!--                    </a>-->
+<!--                    -->
+<!--                    <div class="icon-flex">-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/003-airplane.png" class="icon">-->
+<!--                            <p class="flight">1Flights</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/006-review.png" class="icon">-->
+<!--                            <p class="hotel">2 Hotels</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/002-exercise-1.png" class="icon">-->
+<!--                            <p class="activity">0 Activites</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/007-sedan.png" width="40" class="icon">-->
+<!--                            <p class="transfer">4 Transfers</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="travel-plan">-->
+<!--                        <p class="travel-plan-para"><span class="red">1N</span> Port Blair | <span class="red">2N</span> Havelock |-->
+<!--                    </div>-->
+<!--                    <div class="travel-plan2">-->
+<!--                        <span class="red">1N</span> Niel Island | <span class="red">1N</span> Port Blair</p>-->
+<!--                    </div>-->
+<!--                    <div class="travel-plan3">-->
+<!--                        <div class="travel-plan3-1">-->
+<!--                            <ul class="list">-->
+<!--                                <li class="items">Kedarnath Darshan</li>-->
+<!--                                &lt;!&ndash; <li class="items">Snorkeling</li> &ndash;&gt;-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                        <div class="travel-plan3-2">-->
+<!--                            <p class="one">Starting from</p>-->
+<!--                            <h2 class="price">&#8377;20,854</h2>-->
+<!--                            <p class="two">per person</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="dest">-->
+<!--                    <div class="dest-desc">Shirdi</div>-->
+<!--                    <a href="#" class="dest-a">-->
+<!--                        <img src="css folder/images/shirdi.jpeg" width="300px" height="300px" alt="">-->
+<!--                    </a>-->
+<!--                   -->
+<!--                    <div class="icon-flex">-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/003-airplane.png" class="icon">-->
+<!--                            <p class="flight">2 Flights</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/006-review.png" class="icon">-->
+<!--                            <p class="hotel">2 Hotels</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/002-exercise-1.png" class="icon">-->
+<!--                            <p class="activity">3 Activites</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/007-sedan.png" width="40" class="icon">-->
+<!--                            <p class="transfer">3 Transfers</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="travel-plan">-->
+<!--                        <p class="travel-plan-para"><span class="red">1N</span> Shirdi | <span class="red">1N</span>Aurangabad |-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash; <div class="travel-plan2">-->
+<!--                        <span class="red">1N</span> Niel Island | <span class="red">1N</span> Port Blair</p>-->
+<!--                    </div> &ndash;&gt;-->
+<!--                    <div class="travel-plan3">-->
+<!--                        <div class="travel-plan3-1">-->
+<!--                            <ul class="list">-->
+<!--                                <li class="items">Shirdi Temple</li>-->
+<!--                                <li class="items">Alora Caves</li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                        <div class="travel-plan3-2">-->
+<!--                            <p class="one">Starting from</p>-->
+<!--                            <h2 class="price">&#8377;23,657</h2>-->
+<!--                            <p class="two">per person</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="dest">-->
+<!--                    <div class="dest-desc">Karnataka</div>-->
+<!--                    <a href="#" class="dest-a">-->
+<!--                        <img src="css folder/images/karnataka.webp" width="300px" height="300px" alt="">-->
+<!--                    </a>-->
+<!--                    -->
+<!--                    <div class="icon-flex">-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/003-airplane.png" class="icon">-->
+<!--                            <p class="flight">2 Flights</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/006-review.png" class="icon">-->
+<!--                            <p class="hotel">3 Hotels</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/002-exercise-1.png" class="icon">-->
+<!--                            <p class="activity">4 Activites</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/007-sedan.png" width="40" class="icon">-->
+<!--                            <p class="transfer">6 Transfers</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="travel-plan">-->
+<!--                        <p class="travel-plan-para"><span class="red">2N</span> Ooty | <span class="red">1N</span> Mysore |-->
+<!--                    </div>-->
+<!--                    <div class="travel-plan2">-->
+<!--                        <span class="red">2N</span> Coorg </p>-->
+<!--                    </div>-->
+<!--                    <div class="travel-plan3">-->
+<!--                        <div class="travel-plan3-1">-->
+<!--                            <ul class="list">-->
+<!--                                <li class="items">Dubare Elephant Cave</li>-->
+<!--                                <li class="items">Abbi Falls</li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                        <div class="travel-plan3-2">-->
+<!--                            <p class="one">Starting from</p>-->
+<!--                            <h2 class="price">&#8377;29,266</h2>-->
+<!--                            <p class="two">per person</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="dest">-->
+<!--                    <div class="dest-desc">Tamil Nadu</div>-->
+<!--                    <a href="#" class="dest-a">-->
+<!--                        <img src="css folder/images/tamil nadu.jpg" width="300px" height="300px" alt="">-->
+<!--                    </a>-->
+<!--                    -->
+<!--                    <div class="icon-flex">-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/003-airplane.png" class="icon">-->
+<!--                            <p class="flight">2 Flights</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/006-review.png" class="icon">-->
+<!--                            <p class="hotel">4 Hotels</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/002-exercise-1.png" class="icon">-->
+<!--                            <p class="activity">8 Activites</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/007-sedan.png" width="40" class="icon">-->
+<!--                            <p class="transfer">5 Transfers</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="travel-plan">-->
+<!--                        <p class="travel-plan-para"><span class="red">1N</span> Port Blair | <span class="red">2N</span> Havelock |-->
+<!--                    </div>-->
+<!--                    <div class="travel-plan2">-->
+<!--                        <span class="red">1N</span> Niel Island | <span class="red">1N</span> Port Blair</p>-->
+<!--                    </div>-->
+<!--                    <div class="travel-plan3">-->
+<!--                        <div class="travel-plan3-1">-->
+<!--                            <ul class="list">-->
+<!--                                <li class="items">Half Day Adventure</li>-->
+<!--                                <li class="items">Snorkeling</li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                        <div class="travel-plan3-2">-->
+<!--                            <p class="one">Starting from</p>-->
+<!--                            <h2 class="price">&#8377;44,848</h2>-->
+<!--                            <p class="two">per person</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="dest">-->
+<!--                    <div class="dest-desc">Panjim</div>-->
+<!--                    <a href="#" class="dest-a">-->
+<!--                        <img src="css folder/images/panjim.webp" width="300px" height="300px" alt="">-->
+<!--                    </a>-->
+<!--                    -->
+<!--                    <div class="icon-flex">-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/003-airplane.png" class="icon">-->
+<!--                            <p class="flight">2 Flights</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/006-review.png" class="icon">-->
+<!--                            <p class="hotel">4 Hotels</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/002-exercise-1.png" class="icon">-->
+<!--                            <p class="activity">8 Activites</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/007-sedan.png" width="40" class="icon">-->
+<!--                            <p class="transfer">5 Transfers</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    -->
+<!--                    <div class="travel-plan">-->
+<!--                        <p class="travel-plan-para"><span class="red">1N</span> Port Blair | <span class="red">2N</span> Havelock |-->
+<!--                    </div>-->
+<!--                    <div class="travel-plan2">-->
+<!--                        <span class="red">1N</span> Niel Island | <span class="red">1N</span> Port Blair</p>-->
+<!--                    </div>-->
+<!--                    <div class="travel-plan3">-->
+<!--                        <div class="travel-plan3-1">-->
+<!--                            <ul class="list">-->
+<!--                                <li class="items">Half Day Adventure</li>-->
+<!--                                <li class="items">Snorkeling</li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                        <div class="travel-plan3-2">-->
+<!--                            <p class="one">Starting from</p>-->
+<!--                            <h2 class="price">&#8377;44,848</h2>-->
+<!--                            <p class="two">per person</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="dest">-->
+<!--                    <div class="dest-desc">Agara</div>-->
+<!--                    <a href="#" class="dest-a">-->
+<!--                        <img src="css folder/images/taj mahal.jpg" width="300px" height="300px" alt="">-->
+<!--                    </a>-->
+<!--                    -->
+<!--                    <div class="icon-flex">-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/003-airplane.png" class="icon">-->
+<!--                            <p class="flight">2 Flights</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/006-review.png" class="icon">-->
+<!--                            <p class="hotel">4 Hotels</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/002-exercise-1.png" class="icon">-->
+<!--                            <p class="activity">8 Activites</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/007-sedan.png" width="40" class="icon">-->
+<!--                            <p class="transfer">5 Transfers</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="travel-plan">-->
+<!--                        <p class="travel-plan-para"><span class="red">1N</span> Port Blair | <span class="red">2N</span> Havelock |-->
+<!--                    </div>-->
+<!--                    <div class="travel-plan2">-->
+<!--                        <span class="red">1N</span> Niel Island | <span class="red">1N</span> Port Blair</p>-->
+<!--                    </div>-->
+<!--                    <div class="travel-plan3">-->
+<!--                        <div class="travel-plan3-1">-->
+<!--                            <ul class="list">-->
+<!--                                <li class="items">Half Day Adventure</li>-->
+<!--                                <li class="items">Snorkeling</li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                        <div class="travel-plan3-2">-->
+<!--                            <p class="one">Starting from</p>-->
+<!--                            <h2 class="price">&#8377;44,848</h2>-->
+<!--                            <p class="two">per person</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="dest">-->
+<!--                    <div class="dest-desc">Maldives</div>-->
+<!--                    <a href="#" class="dest-a">-->
+<!--                        <img src="css folder/images/maldives-exc.jpg" width="300px" height="300px" alt="">-->
+<!--                    </a>-->
+<!--                    -->
+<!--                    <div class="icon-flex">-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/003-airplane.png" class="icon">-->
+<!--                            <p class="flight">2 Flights</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/006-review.png" class="icon">-->
+<!--                            <p class="hotel">4 Hotels</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/002-exercise-1.png" class="icon">-->
+<!--                            <p class="activity">8 Activites</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/007-sedan.png" width="40" class="icon">-->
+<!--                            <p class="transfer">5 Transfers</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="travel-plan">-->
+<!--                        <p class="travel-plan-para"><span class="red">1N</span> Port Blair | <span class="red">2N</span> Havelock |-->
+<!--                    </div>-->
+<!--                    <div class="travel-plan2">-->
+<!--                        <span class="red">1N</span> Niel Island | <span class="red">1N</span> Port Blair</p>-->
+<!--                    </div>-->
+<!--                    <div class="travel-plan3">-->
+<!--                        <div class="travel-plan3-1">-->
+<!--                            <ul class="list">-->
+<!--                                <li class="items">Half Day Adventure</li>-->
+<!--                                <li class="items">Snorkeling</li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                        <div class="travel-plan3-2">-->
+<!--                            <p class="one">Starting from</p>-->
+<!--                            <h2 class="price">&#8377;44,848</h2>-->
+<!--                            <p class="two">per person</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="dest">-->
+<!--                    <div class="dest-desc">Kashmir</div>-->
+<!--                    <a href="#" class="dest-a">-->
+<!--                        <img src="css folder/images/kashmir.jpg" width="300px" height="300px" alt="">-->
+<!--                    </a>-->
+<!--                    -->
+<!--                    <div class="icon-flex">-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/003-airplane.png" class="icon">-->
+<!--                            <p class="flight">2 Flights</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/006-review.png" class="icon">-->
+<!--                            <p class="hotel">4 Hotels</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/002-exercise-1.png" class="icon">-->
+<!--                            <p class="activity">8 Activites</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/007-sedan.png" width="40" class="icon">-->
+<!--                            <p class="transfer">5 Transfers</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="travel-plan">-->
+<!--                        <p class="travel-plan-para"><span class="red">1N</span> Port Blair | <span class="red">2N</span> Havelock |-->
+<!--                    </div>-->
+<!--                    <div class="travel-plan2">-->
+<!--                        <span class="red">1N</span> Niel Island | <span class="red">1N</span> Port Blair</p>-->
+<!--                    </div>-->
+<!--                    <div class="travel-plan3">-->
+<!--                        <div class="travel-plan3-1">-->
+<!--                            <ul class="list">-->
+<!--                                <li class="items">Half Day Adventure</li>-->
+<!--                                <li class="items">Snorkeling</li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                        <div class="travel-plan3-2">-->
+<!--                            <p class="one">Starting from</p>-->
+<!--                            <h2 class="price">&#8377;44,848</h2>-->
+<!--                            <p class="two">per person</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="dest">-->
+<!--                    <div class="dest-desc">Kerala</div>-->
+<!--                    <a href="#" class="dest-a">-->
+<!--                        <img src="css folder/images/kerala.jpeg" width="300px" height="300px" alt="">-->
+<!--                    </a>-->
+<!--                    -->
+<!--                    <div class="icon-flex">-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/003-airplane.png" class="icon">-->
+<!--                            <p class="flight">2 Flights</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/006-review.png" class="icon">-->
+<!--                            <p class="hotel">4 Hotels</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/002-exercise-1.png" class="icon">-->
+<!--                            <p class="activity">8 Activites</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/007-sedan.png" width="40" class="icon">-->
+<!--                            <p class="transfer">5 Transfers</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="travel-plan">-->
+<!--                        <p class="travel-plan-para"><span class="red">1N</span> Port Blair | <span class="red">2N</span> Havelock |-->
+<!--                    </div>-->
+<!--                    <div class="travel-plan2">-->
+<!--                        <span class="red">1N</span> Niel Island | <span class="red">1N</span> Port Blair</p>-->
+<!--                    </div>-->
+<!--                    <div class="travel-plan3">-->
+<!--                        <div class="travel-plan3-1">-->
+<!--                            <ul class="list">-->
+<!--                                <li class="items">Half Day Adventure</li>-->
+<!--                                <li class="items">Snorkeling</li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                        <div class="travel-plan3-2">-->
+<!--                            <p class="one">Starting from</p>-->
+<!--                            <h2 class="price">&#8377;44,848</h2>-->
+<!--                            <p class="two">per person</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="dest">-->
+<!--                    <div class="dest-desc">Mumbai</div>-->
+<!--                    <a href="#" class="dest-a">-->
+<!--                        <img src="css folder/images/mumbai.webp" width="300px" height="300px" alt="">-->
+<!--                    </a>-->
+<!--                    -->
+<!--                    <div class="icon-flex">-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/003-airplane.png" class="icon">-->
+<!--                            <p class="flight">2 Flights</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/006-review.png" class="icon">-->
+<!--                            <p class="hotel">4 Hotels</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/002-exercise-1.png" class="icon">-->
+<!--                            <p class="activity">8 Activites</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/007-sedan.png" width="40" class="icon">-->
+<!--                            <p class="transfer">5 Transfers</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="travel-plan">-->
+<!--                        <p class="travel-plan-para"><span class="red">1N</span> Port Blair | <span class="red">2N</span> Havelock |-->
+<!--                    </div>-->
+<!--                    <div class="travel-plan2">-->
+<!--                        <span class="red">1N</span> Niel Island | <span class="red">1N</span> Port Blair</p>-->
+<!--                    </div>-->
+<!--                    <div class="travel-plan3">-->
+<!--                        <div class="travel-plan3-1">-->
+<!--                            <ul class="list">-->
+<!--                                <li class="items">Half Day Adventure</li>-->
+<!--                                <li class="items">Snorkeling</li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                        <div class="travel-plan3-2">-->
+<!--                            <p class="one">Starting from</p>-->
+<!--                            <h2 class="price">&#8377;44,848</h2>-->
+<!--                            <p class="two">per person</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="dest">-->
+<!--                    <div class="dest-desc">Rajasthan</div>-->
+<!--                    <a href="#" class="dest-a">-->
+<!--                        <img src="css folder/images/rajasthan.jpg" width="300px" height="300px" alt="">-->
+<!--                    </a>-->
+<!--                    -->
+<!--                    <div class="icon-flex">-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/003-airplane.png" class="icon">-->
+<!--                            <p class="flight">2 Flights</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/006-review.png" class="icon">-->
+<!--                            <p class="hotel">4 Hotels</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/002-exercise-1.png" class="icon">-->
+<!--                            <p class="activity">8 Activites</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/007-sedan.png" width="40px" class="icon">-->
+<!--                            <p class="transfer">5 Transfers</p>-->
+<!--                        </div>-->
+<!--                        -->
+<!--                    </div>-->
+<!--                    <div class="travel-plan">-->
+<!--                        <p class="travel-plan-para"><span class="red">1N</span> Port Blair | <span class="red">2N</span> Havelock |-->
+<!--                    </div>-->
+<!--                    <div class="travel-plan2">-->
+<!--                        <span class="red">1N</span> Niel Island | <span class="red">1N</span> Port Blair</p>-->
+<!--                    </div>-->
+<!--                    <div class="travel-plan3">-->
+<!--                        <div class="travel-plan3-1">-->
+<!--                            <ul class="list">-->
+<!--                                <li class="items">Half Day Adventure</li>-->
+<!--                                <li class="items">Snorkeling</li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                        <div class="travel-plan3-2">-->
+<!--                            <p class="one">Starting from</p>-->
+<!--                            <h2 class="price">&#8377;44,848</h2>-->
+<!--                            <p class="two">per person</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="dest">-->
+<!--                    <div class="dest-desc">Manali</div>-->
+<!--                    <a href="#" class="dest-a">-->
+<!--                        <img src="css folder/images/Manali.avif" width="300px" height="300px" alt="">-->
+<!--                    </a>-->
+<!--                    -->
+<!--                    <div class="icon-flex">-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/003-airplane.png" class="icon">-->
+<!--                            <p class="flight">2 Flights</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/006-review.png" class="icon">-->
+<!--                            <p class="hotel">4 Hotels</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/002-exercise-1.png" class="icon">-->
+<!--                            <p class="activity">8 Activites</p>-->
+<!--                        </div>-->
+<!--                        <div class="icons-container">-->
+<!--                            <img src="css folder/images/007-sedan.png" width="40" class="icon">-->
+<!--                            <p class="transfer">5 Transfers</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="travel-plan">-->
+<!--                        <p class="travel-plan-para"><span class="red">1N</span> Port Blair | <span class="red">2N</span> Havelock |-->
+<!--                    </div>-->
+<!--                    <div class="travel-plan2">-->
+<!--                        <span class="red">1N</span> Niel Island | <span class="red">1N</span> Port Blair</p>-->
+<!--                    </div>-->
+<!--                    <div class="travel-plan3">-->
+<!--                        <div class="travel-plan3-1">-->
+<!--                            <ul class="list">-->
+<!--                                <li class="items">Half Day Adventure</li>-->
+<!--                                <li class="items">Snorkeling</li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                        <div class="travel-plan3-2">-->
+<!--                            <p class="one">Starting from</p>-->
+<!--                            <h2 class="price">&#8377;44,848</h2>-->
+<!--                            <p class="two">per person</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+.nav_bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(37, 124, 37);
+    font-family: arail;
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+.logo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 0.1;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.info_button{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 0.3;
+    margin-left: 45px;
+}
+.register{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 0.09;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    color: rgb(37, 124, 37);
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mumbai</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/place.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css folder/homepage_responsive.css') }}">
+</head>
+<style>
+    body {
+  background-image: url("https://www.newegg.com/insider/wp-content/uploads/windows_xp_bliss-wide.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+    }
+</style>
+<body>
+    <div class="navbar">
+   
+        <!-- Navbar logo -->
+        <div class="nav-header">
+          <div class="nav-logo">
+            <a href="#">
+              <img src="logo.png" width="100px" alt="logo">
+            </a>
+          </div>
+        </div>
+    
+        <!-- responsive navbar toggle button -->
+        <input type="checkbox" id="nav-check">
+        <div class="nav-btn">
+          <label for="nav-check">
+            <ion-icon name="chevron-up-outline"></ion-icon>
+            <!-- <span></span>
+            <span></span>
+            <span></span> -->
+        </label>
+    </div>
+
+    <!-- Navbar items -->
+    <div class="nav-links">
+    <a href="{{url_for('home') }}"><ion-icon name="home-outline" class="icon"></ion-icon>Home</a>
+    <a href="{{url_for('book999') }}"><ion-icon name="airplane-outline" class="icon"></ion-icon> Book now</a>
+    <a href="{{url_for('deals') }}"><ion-icon name="card-outline" class="icon"></ion-icon> Deals</a>
+    <!-- Dropdown menu -->
+    <div class="dropdown">
+      <a class="dropBtn" href="{{url_for('book999') }}"><ion-icon name="earth-outline" class="icon"></ion-icon> Blog
+        <i class="fas fa-angle-down"></i>
+      </a>
+      <div class="drop-content">
+    
+        <!-- Creating sub menu Dropdown -->
+        <div class="dropdown2">
+          <div class="drop-content2">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <button class="loginBtn">Login</button> -->
+    </div>
+
+
+
+
+    <div class="combine">
+
+    <div class="front_info">
+        <div class="place_img">
+           <img src="https://media.istockphoto.com/id/860528756/photo/the-bandraworli-sea-link-mumbai-india.jpg?s=612x612&w=0&k=20&c=xT9TK7oYkP6TP62lHqP0H-9mfz9cWva4OcYEnt06cjc=" alt="place_holder"><!-- {{ url_for('static', filename='css/assets/photo/photo2.0/mumbai.jpg')}}-->
+        </div>
+        <div class="detail_info">
+            <h1 class="delhi">Mumbai</h1>
+            <p> Duration : 3 days</p>
+            <p> Guest    : 4 adults</p>
+            <div class="min_prize">MIN PRICE : $ 2,800</div>
+        </div>
+    </div>
+    </div>
+
+    <div  class="schedule">Top Things To Do</div>
+
+    <div class="item_list">
+        <div class="category">
+                <div class=" category-1">
+                    Places To visit <ion-icon name="location-outline" class="cat"></ion-icon>
+                </div>
+                <div class=" category-2" >
+                    gate way  of  india, marine drive, juhu beach,Bandra-worli sealink,cst,colaba,elephanta cave
+                </div>
+        </div>
+        <div class="category">
+                <div class=" category-1">
+                    Places To Shop  <ion-icon name="cart-outline" class="cat"></ion-icon>
+                </div>
+                <div class=" category-2">
+                    Colaba Causeway,  Crewford market, Linking road, Hill road 
+                </div>
+        </div>
+        <div class="category">
+                <div class=" category-1">
+                    Places To Eat    <ion-icon name="restaurant-outline" class="cat"></ion-icon>
+                </div>
+                <div class=" category-2" >
+                    lake view cafe, Tanatan, yeda republic, Bomday high sea lounge, ruby talkies
+                </div>
+        </div>
+    </div>
+
+    <div  class="schedule-2">Our Top Picks For Hotel</div>
+
+    <div class="hotel_list">
+        
+        <div class="hotel_card">
+            <div class="hotel_img">
+                <img src="{{ url_for('static', filename='css/assets/photo/photo2.0/jw-marriott-hotel-mumbai.jpg')}}" alt="hotel">
+            </div>
+            <div class="hotel_detail">
+                <div class="hotel_name">
+                    JW Marriott Mumbai Sahar Airport 5 stars </div>
+                <div class="location"><ion-icon name="location-outline"></ion-icon>    Hotel in Western Suburbs, Mumbai</div>
+                <div class="complete_sec">
+                    <div class="review_sec">
+                        <p class="remark">Fabulous</p>
+                        <p class=" review"> 2,159 reviews</p>
+                    </div>
+                    <div class="cost">
+                        <p class="prize">$ 9,500</p>
+                        <p class="night_cost">per night</p>
+                        <div class="but_cont"><button class="Contact">Contact</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hotel_card">
+            <div class="hotel_img">
+                <img src="{{ url_for('static', filename='css/assets/photo/photo2.0/tajhotel.webp')}}" alt="hotel">
+            </div>
+            <div class="hotel_detail">
+                <div class="hotel_name">
+                    The Taj Mahal Tower Mumbai</div>
+                <div class="location"><ion-icon name="location-outline"></ion-icon>     Hotel in South Mumbai, Mumbai</div>
+                <div class="complete_sec">
+                    <div class="review_sec">
+                        <p class="remark">Superb</p>
+                        <p class=" review"> 4,261 reviews</p>
+                    </div>
+                    <div class="cost">
+                        <p class="prize">$ 10,500</p>
+                        <p class="night_cost">per night</p>
+                        <div class="but_cont"><button class="Contact">Contact</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hotel_card">
+            <div class="hotel_img">
+                <img src="{{ url_for('static', filename='css/assets/photo/photo2.0/A2942_1.jpg')}}" alt="hotel">
+            </div>
+            <div class="hotel_detail">
+                <div class="hotel_name">Trident Bandra Kurla </div>
+                <div class="location"><ion-icon name="location-outline"></ion-icon>     Hotel in Bandra, Mumbai</div>
+                <div class="complete_sec">
+                    <div class="review_sec">
+                        <p class="remark">Fabulous</p>
+                        <p class=" review"> 3,208 reviews</p>
+                    </div>
+                    <div class="cost">
+                        <p class="prize">$ 8,853</p>
+                        <p class="night_cost">per night</p>
+                        <div class="but_cont"><button class="Contact">Contact</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hotel_card">
+            <div class="hotel_img">
+                <img src="{{ url_for('static', filename='css/assets/photo/photo2.0/mumbai-oberoi-review.jpg')}}" alt="hotel">
+            </div>
+            <div class="hotel_detail">
+                <div class="hotel_name">
+                    oberoi Mumbai Hotel</div>
+                <div class="location"><ion-icon name="location-outline"></ion-icon>     Hotel in South Mumbai, Mumbai</div>
+                <div class="complete_sec">
+                    <div class="review_sec">
+                        <p class="remark">Fabulous</p>
+                        <p class=" review"> 3,446 reviews</p>
+                    </div>
+                    <div class="cost">
+                        <p class="prize">$ 9,450</p>
+                        <p class="night_cost">per night</p>
+                        <div class="but_cont"><button class="Contact">Contact</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+
+
+        
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <iframe width="100%" height="640" style="width: 100%; height: 640px; border: none; max-width: 100%;" allow="xr-spatial-tracking; vr; gyroscope; accelerometer; fullscreen; autoplay; xr" scrolling="no" allowfullscreen="true"  frameborder="0" src="https://webobook.com/public/64837cf71925ee243a06db92,en?ap=true&si=true&sm=false&sp=true&sfr=false&sl=false&sop=false&" allowvr="yes" ></iframe>
+</body>
+
+</html>
